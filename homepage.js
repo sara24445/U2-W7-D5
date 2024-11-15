@@ -80,13 +80,12 @@ const products = [
   },
 ]
 
-// Function to fetch products from the API
 const fetchProducts = async () => {
   try {
     const response = await fetch(apiUrl, {
       method: 'GET',
       headers: {
-        Authorization: `Bearer YOUR_API_TOKEN`, // Use the correct token
+        Authorization: `Bearer YOUR_API_TOKEN`,
       },
     })
 
@@ -96,16 +95,15 @@ const fetchProducts = async () => {
 
     const data = await response.json()
     console.log('Dati ottenuti:', data)
-    displayProducts(data) // Call display function
+    displayProducts(data)
   } catch (error) {
     console.error('Errore:', error)
   }
 }
 
-// Function to display products in the UI
 const displayProducts = (products) => {
   const productListElement = document.getElementById('productList')
-  productListElement.innerHTML = '' // Clear existing content
+  productListElement.innerHTML = ''
 
   products.forEach((product) => {
     const productCard = `
@@ -121,20 +119,19 @@ const displayProducts = (products) => {
         </div>
       </div>
     `
-    productListElement.innerHTML += productCard // Append each card to the product list
+    productListElement.innerHTML += productCard
   })
 }
 
-// Function to add products to the API
 const addProducts = async () => {
   try {
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer YOUR_API_TOKEN`, // Same token as above
+        Authorization: `Bearer YOUR_API_TOKEN`,
       },
-      body: JSON.stringify(products), // If you intend to add, ensure correct format
+      body: JSON.stringify(products),
     })
 
     if (!response.ok) {
@@ -153,10 +150,8 @@ const addProducts = async () => {
   }
 }
 
-// Add event listener for the button
 document
   .getElementById('addProductsButton')
   .addEventListener('click', addProducts)
 
-// Fetch products on page load
 fetchProducts()
