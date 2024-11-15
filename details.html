@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dettagli Prodotto</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .product-image {
+        max-width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .product-details {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1 id="name" class="display-4" style="color: #ff4081"></h1>
+      <img id="product-image" alt="Caramella" class="product-image mt-4" />
+
+      <div class="product-details">
+        <h2 class="h4">Descrizione</h2>
+        <p id="description"></p>
+
+        <h2 class="h4">Prezzo</h2>
+        <p id="product-price" class="h4" style="color: #ff4081"></p>
+
+        <h2 class="h4">Quantità</h2>
+        <input
+          type="number"
+          id="product-quantity"
+          value="1"
+          min="1"
+          max="10"
+          class="form-control w-25 mx-auto"
+        />
+
+        <button class="btn btn-pink mt-3">Aggiungi al Carrello</button>
+        <button class="btn btn-secondary mt-3" onclick="window.history.back();">
+          Torna Indietro
+        </button>
+      </div>
+    </div>
+
+    <script src="./details.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

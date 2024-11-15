@@ -1,0 +1,81 @@
+/* styles.css */
+body {
+  background-color: #fff8e1;
+  background-image: url('https://example.com/images/background-candy.jpg'); /* Aggiungi un'immagine di sfondo a tema caramelle */
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  border-bottom: 2px solid #d50000;
+}
+
+.card {
+  transition: transform 0.2s;
+  border-radius: 15px;
+  overflow: hidden; /* Per mantenere la forma arrotondata */
+}
+
+.card img {
+  border-radius: 15px 15px 0 0;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Effetto hover */
+}
+
+.btn-pink {
+  background-color: #ff4081;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn-pink:hover {
+  background-color: #e91e63;
+}
+
+.card-body {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Trasparenza di sfondo per i corpi delle card */
+}
+
+.card-title {
+  font-family: 'Lobster', cursive; /* Font per i titoli delle card */
+  color: #d50000;
+}
+
+.card-text {
+  font-size: 0.9rem; /* Font più piccolo per il testo */
+}
+
+h1,
+h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombra del testo per il titolo */
+}
+
+/* Aggiungi un po' di margine ai pulsanti */
+.btn {
+  margin-top: 10px;
+}
+.candy-banner {
+  width: 100%;
+  height: 250px;
+  overflow: hidden; /* Nasconde la parte che esce dal rettangolo */
+  position: relative;
+  border-radius: 15px;
+}
+
+.candy-banner img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centra l'immagine rispetto al contenitore */
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back Office - Gestione Prodotti</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Gestione Prodotti</h1>
+      <form id="productForm">
+        <input type="hidden" id="productId" />
+        <!-- Campo per ID prodotto -->
+        <div class="form-group">
+          <label for="productName">Nome Prodotto</label>
+          <input type="text" class="form-control" id="productName" required />
+        </div>
+        <div class="form-group">
+          <label for="productDescription">Descrizione</label>
+          <textarea
+            class="form-control"
+            id="productDescription"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="productBrand">Marca</label>
+          <input type="text" class="form-control" id="productBrand" required />
+        </div>
+        <div class="form-group">
+          <label for="productPrice">Prezzo</label>
+          <input
+            type="number"
+            class="form-control"
+            id="productPrice"
+            step="0.01"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Salva Prodotto</button>
+        <button type="reset" class="btn btn-secondary" onclick="resetForm()">
+          Reset
+        </button>
+      </form>
+      <div id="message" class="mt-3"></div>
+
+      <h2 class="mt-5">Prodotti Esistenti</h2>
+      <table class="table mt-3" id="productTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Marca</th>
+            <th>Prezzo</th>
+            <th>Azioni</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Prodotti verranno inseriti qui -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="backoffice.js"></script>
+  </body>
+</html>
